@@ -1,0 +1,68 @@
+// src/components/sections/Contact.js
+
+import React from "react";
+
+export default function Contact() {
+  return (
+    <section className="space-y-8">
+      <div>
+        <h2 className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">
+          Contact Me
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mt-2">
+          I'd love to hear from you — whether it’s a question, opportunity, or idea. Let’s build something great!
+        </p>
+      </div>
+
+      <form
+        action="https://formspree.io/f/meokdbqo" 
+        method="POST"
+        className="space-y-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md"
+      >
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="flex flex-col">
+            <label htmlFor="name" className="text-sm text-gray-700 dark:text-gray-300 mb-1">
+              Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="email" className="text-sm text-gray-700 dark:text-gray-300 mb-1">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="message" className="text-sm text-gray-700 dark:text-gray-300 mb-1">
+            Your Message
+          </label>
+          <textarea
+            name="message"
+            rows="5"
+            required
+            className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold shadow transition"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+  );
+}
