@@ -1,70 +1,94 @@
-// src/components/sections/About.js
-
+// src/components/sections/Achievements.js
 import React from "react";
 
-export default function About() {
+const achievements = [
+  {
+    title: "Introduction to AI and Machine Learning on Google Cloud",
+    platform: "Google Cloud · Coursera",
+    date: "June 2025",
+    description:
+      "Learned tools and products for building ML pipelines, generative AI, BigQuery ML, AutoML & MLOps on Google Cloud." +
+      " This course introduces the AI and machine learning (ML) offerings on Google Cloud that support the data‑to‑AI lifecycle…" +
+      " :contentReference[oaicite:1]{index=1}",
+    certLink: "https://coursera.org/share/YOUR_CERT_LINK",
+  },
+  {
+    title: "Build, Train and Deploy ML Models with Keras on Google Cloud",
+    platform: "Google Cloud · Coursera",
+    date: "May 2025",
+    description:
+      "Covers building ML models with TensorFlow & Keras, improving accuracy, and deploying scalable models via Vertex AI." +
+      " :contentReference[oaicite:2]{index=2}",
+    certLink: "https://coursera.org/share/YOUR_CERT_LINK",
+  },
+  {
+    title: "Web Application Technologies and Django",
+    platform: "University of Michigan · Coursera",
+    date: "April 2025",
+    description:
+      "Explored MVC patterns, Django’s request‑response cycle, HTML/CSS basics, and deployed apps on PythonAnywhere." +
+      " :contentReference[oaicite:3]{index=3}",
+    certLink: "https://coursera.org/share/YOUR_CERT_LINK",
+  },
+  {
+    title: "Building Web Applications in Django",
+    platform: "University of Michigan · Coursera",
+    date: "March 2025",
+    description:
+      "Focused on Django models, views, templates, and communicating with databases through model objects." +
+      " :contentReference[oaicite:4]{index=4}",
+    certLink: "https://coursera.org/share/YOUR_CERT_LINK",
+  },
+  {
+    title: "Mastering Laravel Framework and PHP",
+    platform: "Udemy",
+    date: "February 2025",
+    description:
+      "Advanced backend development with Laravel, including routing, MVC architecture, ORM & RESTful API development.",
+    certLink: "https://udemy.com/certificate/YOUR_CERT_LINK",
+  },
+  {
+    title: "Google IT Support Professional Certificate",
+    platform: "Google · Coursera",
+    date: "January 2025",
+    description:
+      "Completed all courses in the Google IT Support Professional Certificate covering troubleshooting, system administration, and security fundamentals.",
+    certLink: "https://coursera.org/share/YOUR_CERT_LINK",
+  },
+];
+
+export default function Achievements() {
   return (
     <section className="space-y-8">
-      {/* Heading */}
-      <div>
-        <h2 className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">
-          About Me
+     
+      <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+          Achievements & Certifications
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 mt-2">
-          I’m <span className="font-semibold">Gutu Rarie</span>, a full-stack developer based in Ethiopia,
-          passionate about building impactful software solutions that solve real-world problems.
-        </p>
-      </div>
-
-      {/* Profile Summary */}
-      <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 space-y-4">
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          With a background in Computer Science and Engineering, I bring a deep understanding
-          of both software development and the strategic thinking needed to drive meaningful digital transformation.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          I have experience working with startups and banks, developing platforms like auction systems, 
-          e-commerce apps, and delivery logistics — all while maintaining performance, security, and UX standards.
-        </p>
-      </div>
-
-      {/* Tech Stack */}
-      <div>
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Tech Stack & Tools</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-3 text-sm">
-          {[
-            "JavaScript", "React", "Tailwind CSS", "Node.js",
-            "Django", "MySQL", "Android Studio", "Temenos NFI",
-            "Git & GitHub", "REST APIs", "Firebase", "Postman",
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-center"
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+        {achievements.map((ach, index) => (
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 space-y-3"
+          >
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+              {ach.title}
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {ach.platform} · {ach.date}
+            </p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              {ach.description}
+            </p>
+            <a
+              href={ach.certLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition"
             >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Work Ethic */}
-      <div>
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">My Approach</h3>
-        <p className="text-gray-700 dark:text-gray-300 mt-2">
-          I believe in building software with a strong focus on simplicity, accessibility, and purpose. 
-          I value learning, iteration, and shipping products that matter. 
-          Whether working solo or in a team, I take responsibility and deliver.
-        </p>
-      </div>
-
-      {/* Extras */}
-      <div>
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Languages & Interests</h3>
-        <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 mt-2 space-y-1">
-          <li>Fluent in Afaan Oromo, Amharic, and English</li>
-          <li>Enjoys reading, music creation, and exploring emerging technologies</li>
-          <li>Interested in leadership, fintech innovation, and AI systems</li>
-        </ul>
+              View Certificate
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );

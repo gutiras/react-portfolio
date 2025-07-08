@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaBirthdayCake, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import Profile from '../assets/ProfileDark.png';
+
 export default function ProfileCard() {
   return (
     <div className="space-y-4 text-gray-900 dark:text-white">
@@ -51,17 +52,7 @@ export default function ProfileCard() {
           </div>
         ))}
       </div>
-
-      {/* Resume Button */}
-      <div className="text-center">
-        <a
-          href="/resume.pdf"
-          download
-          className="bg-blue-600 text-white py-2 px-4 rounded-xl shadow hover:bg-blue-700 transition"
-        >
-          Download Resume
-        </a>
-      </div>
+     
     </div>
   );
 }

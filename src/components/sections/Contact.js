@@ -6,8 +6,9 @@ export default function Contact() {
   return (
     <section className="space-y-8">
       <div>
-        <h2 className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">
-          Contact Me
+        
+        <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+           Contact Me
         </h2>
         <p className="text-gray-700 dark:text-gray-300 mt-2">
           I'd love to hear from you — whether it’s a question, opportunity, or idea. Let’s build something great!
