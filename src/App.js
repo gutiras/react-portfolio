@@ -45,7 +45,7 @@ function App() {
 
         {/* Top Bar */}
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-xl font-bold">Well Come!</h1>
+          <h1 className="text-xl font-bold">Well Come to Gutu Rarie's Portfolio!</h1>
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md transition hover:scale-110"
