@@ -10,7 +10,7 @@ import 'aos/dist/aos.css';
 
 function App() {
   
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
   useEffect(() => {
   AOS.init({
