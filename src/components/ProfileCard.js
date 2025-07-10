@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-import Profile from "../assets/ProfileDark.png";
+import Profile from "../assets/profilepic.jpg";
 
 export default function ProfileCard() {
   return (
@@ -22,7 +22,7 @@ export default function ProfileCard() {
         <img
           src={Profile}
           alt="Gutu Rarie"
-          className="w-full h-40 object-cover rounded-xl mb-2"
+          className="w-full h-100 object-cover rounded-xl mb-2"
         />
       </div>
 
