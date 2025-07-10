@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-import Profile from "../assets/transparentProfile.png";
+import Profile from "../assets/profilepic2.jpg";
 
 export default function ProfileCard() {
   return (
