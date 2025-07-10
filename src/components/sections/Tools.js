@@ -1,45 +1,52 @@
 import React from "react";
 import {
-  SiJavascript, SiReact, SiTailwindcss, SiNodedotjs, SiDjango,
-  SiMysql, SiAndroidstudio, SiFirebase, SiPostman, SiGithub,
-  SiGit, SiTemporal,
+  SiJavascript, SiReact, SiTailwindcss, SiPhp, SiDjango,
+  SiMysql, SiAndroidstudio, SiPython, SiPostman, SiGithub,SiBootstrap,
+  SiLaravel,SiDocker,
 } from "react-icons/si";
-
+import { FaMobileAlt } from "react-icons/fa";
 export default function TechStack() {
   const stackGroups = [
-    {
-      title: "Frontend",
-      items: [
-        { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
-        { name: "React", icon: <SiReact className="text-blue-400" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
-      ],
-    },
-    {
-      title: "Backend",
-      items: [
-        { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-        { name: "Django", icon: <SiDjango className="text-emerald-700" /> },
-        { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
-      ],
-    },
-    {
-      title: "Mobile & Cloud",
-      items: [
-        { name: "Android Studio", icon: <SiAndroidstudio className="text-green-600" /> },
-        { name: "Temenos NFI", icon: <SiTemporal className="text-indigo-600" /> },
-        { name: "Firebase", icon: <SiFirebase className="text-orange-400" /> },
-      ],
-    },
-    {
-      title: "Tools & DevOps",
-      items: [
-        { name: "Git", icon: <SiGit className="text-red-500" /> },
-        { name: "GitHub", icon: <SiGithub className="text-black dark:text-white" /> },
-        { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-      ],
-    },
-  ];
+  {
+    title: "Frontend",
+    items: [
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
+      { name: "React", icon: <SiReact className="text-blue-400" /> },
+      { name: "Bootstrap", icon: <SiBootstrap className="text-purple-600" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+    ],
+  },
+  {
+    title: "Backend",
+    items: [
+      { name: "Python", icon: <SiPython className="text-blue-500" /> },
+      { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+    ],
+  },
+  {
+    title: "Mobile",
+    items: [
+      { name: "Kony Visualizer", icon: <FaMobileAlt className="text-purple-600" /> }, // fallback if SiKony doesn't exist
+      { name: "Android Studio", icon: <SiAndroidstudio className="text-green-600" /> },
+    ],
+  },
+  {
+    title: "Frameworks",
+    items: [
+      { name: "Django", icon: <SiDjango className="text-emerald-700" /> },
+      { name: "Laravel", icon: <SiLaravel className="text-red-600" /> },
+    ],
+  },
+  {
+    title: "DevOps & Tools",
+    items: [
+      { name: "GitHub", icon: <SiGithub className="text-black dark:text-white" /> },
+      { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+    ],
+  },
+];
 
   return (
     <section className="space-y-8">
