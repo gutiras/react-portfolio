@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-import Profile from "../assets/profilepic.jpg";
+import Profile from "../assets/transparentProfile.png";
 
 export default function ProfileCard() {
   return (
@@ -18,13 +18,18 @@ export default function ProfileCard() {
       data-aos-duration="1000"
     >
       {/* Profile Image */}
-      <div className="w-full" data-aos="zoom-in" data-aos-delay="100">
-        <img
-          src={Profile}
-          alt="Gutu Rarie"
-          className="w-full h-100 object-cover rounded-xl mb-2"
-        />
-      </div>
+      <div className="w-full relative" data-aos="zoom-in" data-aos-delay="100">
+  {/* Image */}
+  <img
+    src={Profile}
+    alt="Gutu Rarie"
+    className="w-full h-100 object-cover rounded-xl mb-2 z-10 relative"
+  />
+
+  {/* Bottom shadow */}
+  <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/10 to-transparent rounded-b-xl pointer-events-none z-0" />
+</div>
+
 
       {/* Name & Job Title */}
       <div
