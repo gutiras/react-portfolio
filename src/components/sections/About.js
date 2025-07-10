@@ -17,7 +17,7 @@ export default function About() {
       {/* Grid of Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Profile Summary */}
-        <div className="transition duration-300 ease-in-out transform hover:scale-[1.02] bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl">
+        <div className="transition duration-300 ease-in-out transform hover:scale-[1.02] bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl">
           <h3 className="text-xl font-semibold text-gray-700 dark:text-white mb-3">
             Profile Summary
           </h3>
@@ -31,7 +31,7 @@ export default function About() {
         </div>
 
         {/* Work Ethic */}
-        <div className="transition duration-300 ease-in-out transform hover:scale-[1.02] bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl">
+        <div className="transition duration-300 ease-in-out transform hover:scale-[1.02] bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">My Approach</h3>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             I value simplicity, accessibility, and purpose-driven code. Whether solo or in a team, I build software with clarity, integrity, and ownership — delivering what matters.
@@ -40,7 +40,7 @@ export default function About() {
       </div>
 
       {/* Languages & Interests */}
-      <div className="transition duration-300 ease-in-out transform hover:scale-[1.02] bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl">
+      <div className="transition duration-300 ease-in-out transform hover:scale-[1.02] bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl">
         <h3 className="text-xl font-semibold text-gray-700 dark:text-white mb-3">
           Languages & Interests
         </h3>

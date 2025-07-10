@@ -5,7 +5,7 @@ import {
   FaFileAlt,
   FaEnvelope,
   FaTrophy,
-  FaTools
+  FaTools,
 } from "react-icons/fa";
 
 export default function MenuCard({ setActiveSection, activeSection, layout }) {
@@ -16,7 +16,6 @@ export default function MenuCard({ setActiveSection, activeSection, layout }) {
     { key: "achievements", label: "Achievements", icon: <FaTrophy /> },
     { key: "contact", label: "Contact", icon: <FaEnvelope /> },
     { key: "resume", label: "Resume", icon: <FaFileAlt /> },
-   
   ];
 
   const isHorizontal = layout === "horizontal";
@@ -28,8 +27,11 @@ export default function MenuCard({ setActiveSection, activeSection, layout }) {
           ? "flex gap-4 overflow-x-auto p-1"
           : "flex flex-col gap-6 p-2"
       }`}
+      data-aos={isHorizontal ? "fade-up" : "fade-left"}
+      data-aos-delay="100"
+      data-aos-duration="700"
     >
-      {menuItems.map((item) => {
+      {menuItems.map((item, index) => {
         const isActive = item.key === activeSection;
         return (
           <div
@@ -38,6 +40,9 @@ export default function MenuCard({ setActiveSection, activeSection, layout }) {
             className={`flex flex-col items-center justify-center space-y-2 cursor-pointer transition ${
               isHorizontal ? "min-w-[70px] w-[70px]" : "w-full"
             }`}
+            data-aos="zoom-in"
+            data-aos-delay={index * 100}
+            data-aos-duration="500"
           >
             {/* ICON CIRCLE ONLY */}
             <div

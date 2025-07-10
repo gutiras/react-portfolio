@@ -1,42 +1,48 @@
 import React from "react";
+import pmsImage from "../../assets/projects/pms.png";
+import tcmsImage from "../../assets/projects/tcms.png";
+import BestBuyImage from "../../assets/projects/bestbuy.jpg";
+
 
 const projects = [
   {
-    title: "Auction Platform",
-    description:
-      "A web-based auction system where users can bid in real-time with countdown timers and admin control panel.",
-    stack: ["Django", "MySQL", "Bootstrap"],
-    image: "/projects/auction.jpg",
-    live: "https://yourauctiondemo.com",
-    code: "https://github.com/guturarie/auction-system",
-  },
-  {
-    title: "eCommerce Web App",
-    description:
-      "An online shopping platform with product filtering, cart system, payment integration, and order tracking.",
-    stack: ["Laravel", "PHP", "Vue.js"],
-    image: "/projects/ecommerce.jpg",
-    live: "https://yourecommerce.com",
-    code: "https://github.com/guturarie/ecommerce-platform",
-  },
-  {
-    title: "Delivery System",
-    description:
-      "A delivery tracking dashboard for customers and drivers with real-time location updates and delivery status.",
-    stack: ["React", "Firebase", "Google Maps API"],
-    image: "/projects/delivery.jpg",
-    live: "https://yourdeliveryapp.com",
-    code: "https://github.com/guturarie/delivery-system",
-  },
-  {
-    title: "Project Manager App",
+    title: "Project Management System",
     description:
       "A team-oriented project and task tracking tool with role-based access, chat system, and Gantt visualization.",
-    stack: ["Django", "Channels", "Bootstrap"],
-    image: "/projects/projectmanager.jpg",
-    live: "https://yourprojectmanager.com",
-    code: "https://github.com/guturarie/project-manager",
+    stack: ["Django","Python", "Channels", "Bootstrap"],
+    image: pmsImage,
+    live: "https://pms-z704.onrender.com/",
+    code: "https://github.com/gutiras/PMS.git",
   },
+   {
+    title: "Testcase Management System",
+    description:
+      "A web-based platform designed to streamline the creation, organization, execution, and tracking of software test cases. It enables QA teams to upload standardized Excel files, manage test results (Pass, Fail, Ongoing), group test cases by category (e.g., Mastercard, Visacard), and generate insightful reports on testing progress. Built with Django and MySQL, it ensures efficient collaboration, data integrity, and centralized testcase documentation.",
+    stack: ["Django", "Python", "Bootstrap", "MySQL"],
+    image: tcmsImage,
+    live: "https://coop-tcms.onrender.com/",
+    code: "https://github.com/gutiras/Coop-TCMS/tree/master/tcms",
+  },
+  {
+    title: "Auction and Procurement Platform",
+    description:
+      "A web-based auction system where users can bid in real-time , can buy and sell goods and services. It features user registration, product listing, bidding functionality, and a secure payment gateway integration.",
+    stack: ["Laravel", "PHP","MySQL", "Bootstrap"],
+    image: "/projects/auction.jpg",
+   // live: "https://yourauctiondemo.com",
+    code: "https://github.com/gutiras/DAAPADP.git",
+  },
+  {
+    title: "Best Buy App",
+    description:
+      "An online shopping platform with product and Category filtering, cart system",
+    stack: ["Kony Visualizer", "Java Script"],
+    image: BestBuyImage,
+    //live: "https://yourecommerce.com",
+    code: "https://github.com/gutiras/BestBuy.git",
+  },
+ 
+  
 ];
 
 export default function Works() {
@@ -77,7 +83,7 @@ export default function Works() {
                 ))}
               </div>
               <div className="flex gap-4 pt-2">
-                {project.live && (
+                 {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
@@ -86,7 +92,7 @@ export default function Works() {
                   >
                     Live Demo
                   </a>
-                )}
+                )} 
                 {project.code && (
                   <a
                     href={project.code}
