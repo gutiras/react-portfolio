@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -8,7 +7,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-import Profile from "../assets/profilepic2.jpg";
+import Profile from "../assets/profilepic.webp";
 
 export default function ProfileCard() {
   return (

@@ -45,23 +45,22 @@ export default function MenuCard({ setActiveSection, activeSection, layout }) {
             data-aos-duration="500"
           >
             {/* ICON CIRCLE ONLY */}
-            <div
-              className={`p-5 rounded-full shadow-md transition-all duration-300 ${
-                isActive
-                  ? "border-2 border-blue-500 scale-110"
-                  : "border border-transparent"
-              } bg-white dark:bg-gray-800`}
-            >
-              <span
-                className={`text-xl ${
-                  isActive
-                    ? "text-blue-600"
-                    : "text-gray-700 dark:text-white"
-                }`}
-              >
-                {item.icon}
-              </span>
-            </div>
+<div
+  className={`w-14 h-14 flex items-center justify-center rounded-full shadow-md transition-all duration-300 ${
+    isActive
+      ? "border-2 border-blue-500 scale-110"
+      : "border border-transparent"
+  } bg-white dark:bg-gray-800`}
+>
+  <span
+    className={`text-xl ${
+      isActive ? "text-blue-600" : "text-gray-700 dark:text-white"
+    }`}
+  >
+    {item.icon}
+  </span>
+</div>
+
 
             {/* LABEL */}
             <span

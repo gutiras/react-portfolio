@@ -43,20 +43,28 @@ function App() {
     <div className={darkMode ? "dark" : ""}>
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-4 space-y-4">
 
-        {/* Top Bar */}
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-xl font-bold">Well Come to Gutu Rarie's Portfolio!</h1>
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md transition hover:scale-110"
-          >
-            {darkMode ? (
-              <FaSun className="text-yellow-400 text-lg" />
-            ) : (
-              <FaMoon className="text-gray-700 dark:text-gray-300 text-lg" />
-            )}
-          </button>
-        </div>
+  {/* Top Bar */}
+<div className="flex justify-between items-center mb-4 min-h-[64px]">
+  <h1
+    className="text-2xl font-bold text-gray-900 dark:text-white"
+    style={{ fontDisplay: "swap" }}
+  >
+    Welcome to Gutu Rarie's Portfolio!
+  </h1>
+
+  <button
+    onClick={() => setDarkMode(!darkMode)}
+    className="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md transition-transform duration-300 ease-in-out transform hover:scale-110"
+    aria-label="Toggle dark mode"
+  >
+    {darkMode ? (
+      <FaSun className="text-yellow-400 text-lg" />
+    ) : (
+      <FaMoon className="text-gray-700 dark:text-gray-300 text-lg" />
+    )}
+  </button>
+</div>
+
 
         {/* Layout */}
         <div className="flex flex-col md:flex-row gap-4 h-full md:h-[90vh]">
